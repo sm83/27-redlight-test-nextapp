@@ -1,0 +1,34 @@
+.btnDefault {
+  width: 80%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  color: #6e42ca;
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+
+  border: 1.5px solid #6e42ca;
+  border-radius: 4px;
+
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
+
+  padding: 7px 0 7px 0;
+  opacity: 1;
+  /* margin-top: 20px; */
+
+  cursor: pointer;
+}
+
+.btnSelectedModifier {
+  background-color: #6e42ca;
+  color: #fbfaff;
+}

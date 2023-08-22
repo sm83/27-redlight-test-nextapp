@@ -1,0 +1,24 @@
+.postsFixedArea {
+  display: block;
+  width: 100%;
+  height: calc(
+    100% - var(--searchCompArea-height) - var(--contentArea-gap) -
+      var(--searchCompArea-margin-top)
+  );
+}
+
+.postsScroll {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+
+  gap: 16px;
+
+  overflow-y: auto;
+
+  height: 100%;
+}
+
+.postsScroll::-webkit-scrollbar {
+  width: 0px;
+}

@@ -1,0 +1,57 @@
+.headerArea {
+  height: var(--header-height);
+}
+
+.loginAreaForm {
+  display: flex;
+  float: right;
+
+  height: 24px;
+
+  margin: 35px;
+
+  gap: 8px;
+}
+
+.loginAreaInput {
+  text-align: right;
+
+  color: #e5e4fa;
+
+  font-weight: 400;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 15px;
+  opacity: 0.6;
+  letter-spacing: 0.44px;
+
+  width: 300px;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+
+  padding: 3px;
+}
+
+.loginAreaInput:focus {
+  outline-width: 0;
+}
+
+.enterLoginBtn {
+  border: 1.5px solid #6e42ca;
+  border-radius: 4px;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
+
+  color: #6e42ca;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+
+  padding: 3px;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  cursor: pointer;
+}
