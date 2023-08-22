@@ -13,18 +13,18 @@ function App() {
 
   // localStorage.clear();
 
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('currentSession') != undefined) {
-      useEffect(() => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (localStorage.getItem('currentSession') != undefined) {
         const currentSession = localStorage.getItem('currentSession');
 
         if (currentSession != null) {
           dispatch(fetchLocalSession(JSON.parse(currentSession)));
           dispatch(fetchUserData(JSON.parse(currentSession).id));
         }
-      }, [dispatch]);
+      }
     }
-  }
+  }, [dispatch]);
 
   return (
     <>
