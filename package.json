@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"json-server ./src/data/data.json --port 3000\" \"json-server ./src/data/users.json --port 3001\" \"next start --port 3005\"",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,8 +14,10 @@
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "axios": "^1.4.0",
+    "concurrently": "^8.2.1",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
+    "json-server": "^0.17.3",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
