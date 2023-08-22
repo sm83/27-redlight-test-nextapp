@@ -1,8 +1,10 @@
 .searchCompArea {
-  width: 50%;
+  max-width: 1120px;
   margin: 0 auto;
   height: var(--searchCompArea-height);
-  margin-top: 20px;
+  margin: 0 auto;
+
+  padding: 20px;
 
   /* background-color: blanchedalmond; */
 }

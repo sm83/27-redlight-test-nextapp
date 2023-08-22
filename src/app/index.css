@@ -9,3 +9,7 @@ input::placeholder {
 
   border: 0;
 }
+
+body {
+  overflow: hidden;
+}

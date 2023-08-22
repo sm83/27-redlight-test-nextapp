@@ -2,16 +2,17 @@
   margin: 0px;
   background: linear-gradient(16deg, #14072e 0%, #0a081e 100%);
 
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .contentArea {
-  margin: auto;
-  height: calc(100vh - var(--header-height));
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--contentArea-gap);
+  width: calc(100% - 40px);
 
-  /* background-color: aqua; */
+  overflow-y: hidden;
+
+  padding: 0 20px;
+}
+
+.postsBigBebra {
+  height: 500px;
 }

@@ -1,7 +1,10 @@
+'use client';
 import { useAppSelector, useAppDispatch } from '../../hooks';
 import styles from './Search.module.css';
 // import SearchAllBtn from './SearchAllBtn/SearchAllBtn';
 import { SearchIcon } from './SearchIcon';
+
+import { useEffect } from 'react';
 
 import SearchAreaBtn from './SearchAreaBtn/SearchAreaBtn';
 import {
@@ -9,9 +12,29 @@ import {
   setListModeSelected,
   updateSearchField,
 } from '../../store/sessionSlice';
+import { usePathname, useParams, useRouter } from 'next/navigation';
 // import { addToSelected } from '../../store/sessionSlice';
 
 const Search = () => {
+  const pathName = usePathname();
+  const params = useParams();
+  const router = useRouter();
+
+  // console.log();
+
+  useEffect(() => {
+    console.log({ pathName, params, router });
+
+    const searchParams = params?.catchAll;
+
+    if (searchParams?.[0] === 'search' && searchParams?.[1]) {
+      console.log(decodeURIComponent(searchParams?.[1] as string));
+      dispatch(
+        updateSearchField(decodeURIComponent(searchParams?.[1] as string))
+      );
+    }
+  }, []);
+
   const dispatch = useAppDispatch();
 
   const handleAllSet = () => {
@@ -26,6 +49,9 @@ const Search = () => {
 
   const handleSearchInput = (e: any) => {
     // setSearchField(e.target.value);
+    // router.push(`/search/${e.target.value}`, { });
+    window.history.pushState({}, '', `/search/${e.target.value}`);
+
     dispatch(updateSearchField(e.target.value));
   };
 

@@ -58,7 +58,7 @@ const Post = ({ todoElement }: { todoElement: PostElementInterface }) => {
 
   return (
     <div className={styles.postArea}>
-      <div className={styles.postOverlayGradient} />
+      {/* <div className={styles.postOverlayGradient} /> */}
       <div className={styles.postAreas}>
         <div className={styles.postLeftArea}>
           <BlockImage count={todoElement.blocksCount} />

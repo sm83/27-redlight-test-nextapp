@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styles from './Header.module.css';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { findUser, logOut } from '../../store/sessionSlice';
+import { findUser, logOut, usersDb } from '../../store/sessionSlice';
+import axios from 'axios';
 
 const Header = () => {
   const dispatch = useAppDispatch();
@@ -16,6 +17,7 @@ const Header = () => {
     event.preventDefault();
 
     dispatch(findUser(loginName));
+    // dispatch(createUser(loginName));
   };
 
   const handleLogOut = (event: any) => {

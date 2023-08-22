@@ -1,22 +1,23 @@
 .postsFixedArea {
   display: block;
   width: 100%;
-  height: calc(
-    100% - var(--searchCompArea-height) - var(--contentArea-gap) -
-      var(--searchCompArea-margin-top)
-  );
+  height: 100%;
 }
 
 .postsScroll {
-  display: grid;
-  justify-items: center;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  /* justify-items: center; */
+  align-content: flex-start;
+
+  max-width: 1120px;
+  margin: 0 auto;
 
   gap: 16px;
 
-  overflow-y: auto;
+  height: calc(100vh - var(--header-height) - var(--searchCompArea-height));
 
-  height: 100%;
+  overflow-y: auto;
 }
 
 .postsScroll::-webkit-scrollbar {

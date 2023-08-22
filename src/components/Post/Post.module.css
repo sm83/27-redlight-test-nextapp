@@ -1,13 +1,13 @@
 .postArea {
-  width: 50%;
-  height: 166px;
+  width: calc(100% - 40px);
+  padding: 20px;
 
   border-radius: 8px;
 
   /* opacity: 0.6; */
   background: #1c1c33;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 
   position: relative;
 
@@ -17,6 +17,9 @@
 .postOverlayGradient {
   width: 75%;
   height: 100%;
+
+  top: 0;
+  left: 0;
 
   position: absolute;
 
@@ -31,6 +34,12 @@
   display: flex;
   height: 100%;
   width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  gap: 10px;
 }
 
 .postLeftArea {
@@ -55,6 +64,8 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
 
+  white-space: nowrap;
+
   opacity: 1;
   background: linear-gradient(90deg, #6e42ca 0%, #8d29c1 100%);
   background-clip: text;
@@ -70,14 +81,12 @@
 
 .postMiddleArea {
   display: flex;
+  flex-grow: 1;
 
   padding-top: 22px;
   gap: 8px;
 
   flex-direction: column;
-
-  width: 50%;
-  height: calc(100% - 22px);
 }
 
 .postTitle {
@@ -115,6 +124,6 @@
   gap: 10px;
   padding-top: 22px;
 
-  width: 30%;
+  min-width: 250px;
   height: 100%;
 }

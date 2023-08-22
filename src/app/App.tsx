@@ -30,8 +30,8 @@ function App() {
     <>
       <div className={styles.App}>
         <Header />
+        <Search />
         <div className={styles.contentArea}>
-          <Search />
           <Posts />
         </div>
       </div>

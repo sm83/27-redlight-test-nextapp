@@ -52,7 +52,7 @@ export const fetchPost = createAsyncThunk<
       }*/
       );
 
-      console.log(response);
+      // console.log(response);
 
       if (response.statusText != 'OK') {
         throw new Error();

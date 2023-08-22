@@ -44,12 +44,12 @@ const Posts = () => {
   // console.log(renderingBySearch);
 
   return (
-    <div className={styles.postsFixedArea}>
-      <div className={styles.postsScroll}>
-        {renderingByMode.map((postObject, index) => (
-          <Post key={index} todoElement={postObject} />
-        ))}
-      </div>
+    <div className={styles.postsScroll}>
+      {renderingByMode.map((postObject, index) => (
+        <div key={index}>
+          <Post todoElement={postObject} />
+        </div>
+      ))}
     </div>
   );
 };

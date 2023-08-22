@@ -1,3 +1,4 @@
+import { useAppDispatch } from '@/hooks';
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 
 import axios from 'axios';
@@ -46,7 +47,7 @@ const initialState: SessionInfo = {
   nameError: null,
 };
 
-const usersDb = 'http://localhost:3001/users';
+export const usersDb = 'http://localhost:3001/users';
 
 export const findUser = createAsyncThunk<User, string, { rejectValue: string }>(
   'session/findUser',
@@ -60,11 +61,9 @@ export const findUser = createAsyncThunk<User, string, { rejectValue: string }>(
         throw new Error();
       }
 
-      // console.log(response.data[0]);
-
       return response.data[0];
     } catch (error) {
-      return rejectWithValue("Can't find such user or server error.");
+      return rejectWithValue(searchUsername);
     }
   }
 );
@@ -207,9 +206,13 @@ const sessionSlice = createSlice({
       .addCase(findUser.rejected, (state, action) => {
         state.loading = false;
         state.logined = false;
-        state.nameError = action.payload;
 
-        console.log(action.payload);
+        axios.post(usersDb, {
+          username: action.payload,
+          selected: [],
+        });
+
+        console.log('Creating user with name: ' + action.payload);
       })
       .addCase(addToSelected.fulfilled, (state, action) => {
         state.selected = action.payload.selected;

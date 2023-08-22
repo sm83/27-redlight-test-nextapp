@@ -5,7 +5,13 @@ import { Svg4Blocks } from './SvgBlocks/Svg4Blocks';
 import styles from '../Post.module.css';
 
 const BlockImage = ({ count }: { count: number }) => {
-  if (count == 1) {
+  if (count == 0) {
+    return (
+      <div className={styles.postLeftAreaImageArea}>
+        <img src="/dog.png" width={80} />
+      </div>
+    );
+  } else if (count == 1) {
     return (
       <div className={styles.postLeftAreaImageArea}>
         <Svg1Block />
