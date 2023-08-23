@@ -3,6 +3,7 @@ import styles from './Header.module.css';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { findUser, logOut, usersDb } from '../../store/sessionSlice';
 import axios from 'axios';
+import LoginBtn from './LoginBtn/LoginBtn';
 
 const Header = () => {
   const dispatch = useAppDispatch();
@@ -44,9 +45,10 @@ const Header = () => {
             ></input>
           </label>
 
-          <button className={styles.enterLoginBtn} type="submit">
+          {/* <button className={styles.enterLoginBtn} type="submit">
             LOG IN
-          </button>
+          </button> */}
+          <LoginBtn loginName={loginName} type="submit" text="LOG IN" />
         </form>
       </div>
     );

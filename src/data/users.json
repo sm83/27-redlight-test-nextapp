@@ -2,40 +2,8 @@
   "users": [
     {
       "id": 0,
-      "username": "PETROSRAKA",
-      "selected": []
-    },
-    {
-      "id": 1,
       "username": "MEM",
       "selected": []
-    },
-    {
-      "username": "NEGR",
-      "selected": [],
-      "id": 2
-    },
-    {
-      "username": "NEGRITOS",
-      "selected": [],
-      "id": 3
-    },
-    {
-      "username": "NEGROID",
-      "selected": [
-        "5f3a1f96-1f82-44f0-a774-c23936f95c02",
-        "fcfd7b67-d8c8-4fd0-8d42-745bda2a69ab"
-      ],
-      "id": 4
-    },
-    {
-      "username": "NEGRACHOS",
-      "selected": [
-        "5f3a1f96-1f82-44f0-a774-c23936f95c02",
-        "fcfd7b67-d8c8-4fd0-8d42-745bda2a69ab",
-        "d7b28235-6bbc-4b92-9d37-e67720f3010e"
-      ],
-      "id": 5
     }
   ]
 }
